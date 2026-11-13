@@ -49,7 +49,7 @@ struct HomeView: View {
                     .padding(.vertical, 15)
             }
             .padding(.horizontal, 22)
-            .padding(.bottom, 26)
+            .padding(.bottom, 40)
         }
         .background(SawabTheme.cream.ignoresSafeArea())
         .toolbar(.hidden, for: .navigationBar)

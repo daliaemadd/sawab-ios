@@ -2,6 +2,7 @@ import SwiftUI
 
 enum SawabTheme {
     static let cream = Color(red: 0.986, green: 0.972, blue: 0.951)
+    static let paper = Color(red: 1.0, green: 0.992, blue: 0.978)
     static let olive = Color(red: 0.43, green: 0.51, blue: 0.35)
     static let deepOlive = Color(red: 0.33, green: 0.40, blue: 0.28)
     static let ink = Color(red: 0.17, green: 0.18, blue: 0.16)
@@ -16,6 +17,6 @@ enum SawabTheme {
     }
 
     static func body(_ size: CGFloat = 16, weight: Font.Weight = .regular) -> Font {
-        .system(size: size, weight: weight, design: .rounded)
+        .system(size: size, weight: weight, design: .default)
     }
 }

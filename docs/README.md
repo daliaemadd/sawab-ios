@@ -1,67 +1,37 @@
-# Sawab (ثواب) — editorial SwiftUI prototype
+# Sawab design and validation notes
 
-A native iOS prototype of Sawab, a community-help app concept. This version introduces a warmer editorial aesthetic based on the original Figma screens: cream canvas, muted olive accents, serif headlines, subtle details, and custom navigation.
+See [the project README](../README.md) for setup, architecture, and prototype limitations.
 
-![Original Sawab Figma reference](docs/figma-reference.png)
+![Figma reference](figma-reference.png)
 
-## Current features
+## Design direction
 
-- Scrollable home feed with opportunity cards and artwork
-- Detail screens with a save/unsave button
-- Search and category filters in Explore
-- Saved opportunities (in-memory during the current run)
-- Profile concept screen
-- An explicitly demo-only help interaction (no real donations)
+The supplied reference covers Home and Opportunity Detail. Preserve its generous margins, prominent imagery, cream canvas, olive controls, serif opportunity headings, and rounded cards. Explore, Saved, and Profile extend that same palette and typography. Peach is used sparingly for category labels and welcoming empty-state details.
 
-**All organizations, verification labels, community needs, distances, dates, and counts in the prototype are illustrative sample data.** No real donation transactions, account creation, or backend calls are included.
+Colors and fonts live in `Sawab/Theme/SawabTheme.swift`; reusable card and navigation styling live in `Sawab/Components/`.
 
-## Open it in Xcode
+## Manual interaction checklist
 
-This download contains source files, **not** an `.xcodeproj` package. Create your own project:
+- Launch the app and confirm Home is selected.
+- Open each Home opportunity and return using Back.
+- Save an opportunity in Detail, open Saved, and confirm it appears.
+- Quit and relaunch the app; confirm saved opportunities remain.
+- Remove it from Detail and confirm Saved returns to its empty state, including after relaunch.
+- Search Explore for Cairo, Giza, and an unmatched term.
+- Combine search with each category filter and verify matching results.
+- Open Detail from both Explore and Saved.
+- Tap the help action and dismiss the demo alert.
+- Switch among all four tabs; confirm the Explore icon remains visible when selected.
+- Check scrolling and bottom-bar clearance on small and large iPhones.
 
-1. Open Xcode → File → New → Project → iOS → App.
-2. Product name: `Sawab`; Interface: SwiftUI; Language: Swift; deployment target: iOS 16 or later.
-3. Remove the two *generated* Swift files, `ContentView.swift` and `SawabApp.swift`, from the Xcode project (choose Move to Trash). This avoids duplicate `@main` declarations.
-4. Drag all **five folders of Swift files** from `Sawab/` (`App`, `Models`, `Theme`, `Components`, `Views` — five folders) into the Xcode navigator; choose **Copy items if needed** and ensure your Sawab app target is checked. Xcode may offer Create Groups or Create Folder References; choose groups or Xcode synchronized folders for Swift source. Check Build Phases → Compile Sources if files are missing from the target.
-5. Import the `school-supplies.jpg` image into `Assets.xcassets` as an image set named **SchoolSupplies** (or merge the included `Assets.xcassets` into your project's asset catalog). Do not delete Xcode's existing accent color or app icon unless you want to replace them.
-6. Run in an iPhone Simulator (⌘R).
+## Before release
 
-There should be exactly **one** `@main` declaration: `App/SawabApp.swift`.
+Add final app-icon artwork, authorized photography, and real service integrations as appropriate. Review Dynamic Type, VoiceOver, contrast, localization, and interaction behavior on devices before presenting the app as production-ready.
 
-## Source structure
+## Validation results — November 12, 2026
 
-```
-Sawab/
-  App/         SawabApp.swift, RootView.swift
-  Models/      Opportunity.swift
-  Theme/       SawabTheme.swift
-  Components/  BrandMark.swift, OpportunityPhoto.swift, OpportunityCard.swift
-  Views/       HomeView.swift, OpportunityDetailView.swift, ExploreView.swift,
-               SavedView.swift, ProfileView.swift
-  Assets.xcassets/SchoolSupplies.imageset/
-```
-
-## Typography and photography
-
-The large editorial headings use Apple's **built-in New York serif** (SwiftUI `.serif`), so you don't need to install or license a font. This is a closer *feel* to the Figma typography, not an exact font match. You can change typography globally in `Theme/SawabTheme.swift`.
-
-The school supplies image is an original illustrative placeholder included in the project. Replace it with your own or properly licensed photography in the `SchoolSupplies` asset for a photo-forward result closer to Figma. Keep the image set name the same.
-
-## Screenshots for GitHub
-
-From the iPhone Simulator choose **File → Save Screenshot** on the Home, Explore, and detail screens. Put them in `docs/` as `home.png`, `explore.png`, and `detail.png`. Then add to the README:
-
-```md
-| Home | Explore | Opportunity |
-|---|---|---|
-| ![Home](docs/home.png) | ![Explore](docs/explore.png) | ![Details](docs/detail.png) |
-```
-
-## Next steps
-
-- Replace placeholders with authorized photos and real content
-- Add persistence for saved opportunities
-- Improve dynamic type and VoiceOver support, test on smaller devices
-- Build a backend with verified records and appropriate safety/privacy safeguards before handling real requests
-
-Design concept: Dalia Mahmoud. Implementation: SwiftUI prototype.
+- Xcode app builds passed after layout/persistence, sample data/search, detail styling, and final cleanup.
+- Four Swift Testing tests passed in two suites: persistence restore/removal, malformed storage, stable sample IDs/categories, and search/category combinations.
+- Git diff whitespace checks passed.
+- iPhone 17 and iPhone 18 Pro simulator sessions both timed out during readiness, before installation and launch. On-device layout, tapping, and restart walkthroughs remain unverified.
+- Run `swift test` from the root for the model suite. These tests use isolated UserDefaults suites and clean them up; they do not change app favorites.

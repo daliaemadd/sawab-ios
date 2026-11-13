@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+
+# Xcode local state and generated output
+DerivedData/
+build/
+xcuserdata/
+*.xcuserstate
+*.xcarchive
+*.xcresult
+*.ipa
+*.dSYM/
+*.dSYM.zip
+
+# Swift Package Manager generated state (keep Package.swift and Package.resolved)
+.build/
+.swiftpm/
+
+# Local credentials and signing exports
+.env
+.env.*
+!.env.example
+*.p12
+*.p8
+*.mobileprovision
+
+# Editor temporary files
+*.swp
+*.swo
+*~

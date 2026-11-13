@@ -4,13 +4,10 @@ struct ExploreView: View {
     @Binding var favorites: Set<Int>
     @State private var category = "All"
     @State private var searchText = ""
-    private let categories = ["All", "Give items", "Give time"]
+    private let categories = Opportunity.categories
 
     private var filtered: [Opportunity] {
-        Opportunity.examples.filter { opportunity in
-            (category == "All" || opportunity.category == category) &&
-            (searchText.isEmpty || opportunity.title.localizedCaseInsensitiveContains(searchText) || opportunity.city.localizedCaseInsensitiveContains(searchText))
-        }
+        Opportunity.matching(query: searchText, category: category)
     }
 
     var body: some View {
@@ -21,7 +18,7 @@ struct ExploreView: View {
                     .tracking(-1)
                     .foregroundStyle(SawabTheme.ink)
                     .padding(.top, 24)
-                Text("Small acts can go a long way.")
+                Text("Small acts can go a long way. All listings are demos.")
                     .font(SawabTheme.body(15))
                     .foregroundStyle(SawabTheme.muted)
 
@@ -31,7 +28,7 @@ struct ExploreView: View {
                         .font(SawabTheme.body(15))
                 }
                 .padding(15)
-                .background(.white, in: RoundedRectangle(cornerRadius: 17))
+                .background(SawabTheme.paper, in: RoundedRectangle(cornerRadius: 17))
 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 8) {
@@ -41,10 +38,11 @@ struct ExploreView: View {
                                     .font(SawabTheme.body(13, weight: .medium))
                                     .padding(.horizontal, 17)
                                     .padding(.vertical, 10)
-                                    .background(category == item ? SawabTheme.olive : .white, in: Capsule())
+                                    .background(category == item ? SawabTheme.deepOlive : SawabTheme.paper, in: Capsule())
                                     .foregroundStyle(category == item ? .white : SawabTheme.deepOlive)
                             }
                             .buttonStyle(.plain)
+                            .accessibilityAddTraits(category == item ? [.isSelected] : [])
                         }
                     }
                 }
@@ -62,7 +60,7 @@ struct ExploreView: View {
                                 .font(.system(size: 22, weight: .light))
                                 .foregroundStyle(SawabTheme.olive)
                                 .frame(width: 45, height: 45)
-                                .background(SawabTheme.paleGreen, in: RoundedRectangle(cornerRadius: 13))
+                                .background(SawabTheme.peach, in: RoundedRectangle(cornerRadius: 13))
                             VStack(alignment: .leading, spacing: 7) {
                                 Text(opportunity.title)
                                     .font(SawabTheme.editorial(22))
@@ -77,7 +75,7 @@ struct ExploreView: View {
                                 .foregroundStyle(SawabTheme.olive)
                         }
                         .padding(17)
-                        .background(.white, in: RoundedRectangle(cornerRadius: 20))
+                        .background(SawabTheme.paper, in: RoundedRectangle(cornerRadius: 20))
                     }
                     .buttonStyle(.plain)
                 }
@@ -85,6 +83,11 @@ struct ExploreView: View {
                     Text("No needs match your search.")
                         .font(SawabTheme.body(15))
                         .foregroundStyle(SawabTheme.muted)
+                    Button("Clear search and filters") {
+                        searchText = ""
+                        category = "All"
+                    }
+                    .tint(SawabTheme.deepOlive)
                 }
             }
             .padding(.horizontal, 22)

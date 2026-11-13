@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		23BA5A8E30A69D4E0015090A /* figma-reference.png in Resources */ = {isa = PBXBuildFile; fileRef = 23BA5A8C30A69D4E0015090A /* figma-reference.png */; };
-		23BA5A9030A69D570015090A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 23BA5A8F30A69D570015090A /* README.md */; };
+		238B0F0030A6B1A0005C0261 /* SawabTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238B0EFF30A6B1A0005C0261 /* SawabTabBar.swift */; };
+		238B0F0230A6B61B005C0261 /* FavoritesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238B0F0130A6B61B005C0261 /* FavoritesStore.swift */; };
+		238B0F0430A6B63D005C0261 /* SampleOpportunities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238B0F0330A6B63D005C0261 /* SampleOpportunities.swift */; };
 		23BA5AC430A69D730015090A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BA5ABD30A69D730015090A /* HomeView.swift */; };
 		23BA5AC530A69D730015090A /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BA5AB130A69D730015090A /* RootView.swift */; };
 		23BA5AC630A69D730015090A /* OpportunityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BA5ABE30A69D730015090A /* OpportunityDetailView.swift */; };
@@ -25,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		238B0EFF30A6B1A0005C0261 /* SawabTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SawabTabBar.swift; sourceTree = "<group>"; };
+		238B0F0130A6B61B005C0261 /* FavoritesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesStore.swift; sourceTree = "<group>"; };
+		238B0F0330A6B63D005C0261 /* SampleOpportunities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleOpportunities.swift; sourceTree = "<group>"; };
 		23BA5A7730A693D30015090A /* Sawab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sawab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23BA5A8C30A69D4E0015090A /* figma-reference.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "figma-reference.png"; sourceTree = "<group>"; };
 		23BA5A8F30A69D570015090A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -95,6 +99,7 @@
 				23BA5AB430A69D730015090A /* BrandMark.swift */,
 				23BA5AB530A69D730015090A /* OpportunityCard.swift */,
 				23BA5AB630A69D730015090A /* OpportunityPhoto.swift */,
+				238B0EFF30A6B1A0005C0261 /* SawabTabBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -103,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				23BA5AB830A69D730015090A /* Opportunity.swift */,
+				238B0F0130A6B61B005C0261 /* FavoritesStore.swift */,
+				238B0F0330A6B63D005C0261 /* SampleOpportunities.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -170,7 +177,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2660;
-				LastUpgradeCheck = 2660;
+				LastUpgradeCheck = 2720;
 				TargetAttributes = {
 					23BA5A7630A693D30015090A = {
 						CreatedOnToolsVersion = 26.6;
@@ -201,9 +208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23BA5A9030A69D570015090A /* README.md in Resources */,
 				23BA5AD030A69D730015090A /* Assets.xcassets in Resources */,
-				23BA5A8E30A69D4E0015090A /* figma-reference.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,8 +222,11 @@
 				23BA5AC430A69D730015090A /* HomeView.swift in Sources */,
 				23BA5AC530A69D730015090A /* RootView.swift in Sources */,
 				23BA5AC630A69D730015090A /* OpportunityDetailView.swift in Sources */,
+				238B0F0430A6B63D005C0261 /* SampleOpportunities.swift in Sources */,
+				238B0F0230A6B61B005C0261 /* FavoritesStore.swift in Sources */,
 				23BA5AC730A69D730015090A /* BrandMark.swift in Sources */,
 				23BA5AC830A69D730015090A /* ExploreView.swift in Sources */,
+				238B0F0030A6B1A0005C0261 /* SawabTabBar.swift in Sources */,
 				23BA5AC930A69D730015090A /* OpportunityPhoto.swift in Sources */,
 				23BA5ACA30A69D730015090A /* SawabTheme.swift in Sources */,
 				23BA5ACB30A69D730015090A /* Opportunity.swift in Sources */,
@@ -291,6 +299,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -348,6 +357,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};

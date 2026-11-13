@@ -19,7 +19,9 @@ struct SavedView: View {
                 if saved.isEmpty {
                     VStack(spacing: 15) {
                         Image(systemName: "heart")
-                            .font(.system(size: 47, weight: .ultraLight))
+                            .font(.system(size: 36, weight: .ultraLight))
+                            .frame(width: 82, height: 82)
+                            .background(SawabTheme.peach, in: Circle())
                             .foregroundStyle(SawabTheme.olive)
                         Text("Something will find its way here.")
                             .font(SawabTheme.editorial(25))
@@ -32,7 +34,7 @@ struct SavedView: View {
                     .frame(maxWidth: .infinity)
                     .padding(.horizontal, 20)
                     .padding(.vertical, 70)
-                    .background(.white, in: RoundedRectangle(cornerRadius: 24))
+                    .background(SawabTheme.paper, in: RoundedRectangle(cornerRadius: 24))
                     .padding(.top, 19)
                 } else {
                     ForEach(saved) { opportunity in

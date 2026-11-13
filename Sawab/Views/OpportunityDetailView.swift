@@ -10,18 +10,8 @@ struct OpportunityDetailView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 18) {
-                OpportunityPhoto(opportunity: opportunity, height: 250)
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
-
-                HStack(spacing: 6) {
-                    ForEach(0..<5, id: \.self) { index in
-                        Circle()
-                            .fill(index == 0 ? SawabTheme.olive : .clear)
-                            .overlay(Circle().stroke(SawabTheme.olive, lineWidth: 1.5))
-                            .frame(width: 7, height: 7)
-                    }
-                }
-                .frame(maxWidth: .infinity)
+                OpportunityPhoto(opportunity: opportunity, height: 285)
+                    .clipShape(RoundedRectangle(cornerRadius: 24))
 
                 Text(opportunity.title)
                     .font(SawabTheme.editorial(37))
@@ -29,15 +19,15 @@ struct OpportunityDetailView: View {
                     .foregroundStyle(SawabTheme.ink)
                     .fixedSize(horizontal: false, vertical: true)
 
-                Label("Sawab Verified · sample", systemImage: "checkmark")
+                Label("Sawab Verified · demo", systemImage: "checkmark")
                     .font(SawabTheme.body(14, weight: .semibold))
                     .foregroundStyle(SawabTheme.deepOlive)
 
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("Organized by")
+                    Text("Demo organization")
                         .font(SawabTheme.body(13))
                         .foregroundStyle(SawabTheme.muted)
-                    Text(opportunity.organization + "  →")
+                    Text(opportunity.organization)
                         .font(SawabTheme.body(18, weight: .medium))
                         .foregroundStyle(SawabTheme.deepOlive)
                 }
@@ -46,15 +36,11 @@ struct OpportunityDetailView: View {
                     .font(SawabTheme.body(15))
                     .foregroundStyle(SawabTheme.ink)
 
-                VStack(alignment: .leading, spacing: 22) {
-                    DetailRow(symbol: "mappin", title: "Location", value: opportunity.city)
-                    DetailRow(symbol: "clock", title: "Ends", value: opportunity.deadline)
-                    DetailRow(symbol: "scope", title: "Goal", value: opportunity.goal)
-                    DetailRow(symbol: "person.2", title: "Donations", value: opportunity.contributors)
-                }
-                .padding(26)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .background(.white, in: RoundedRectangle(cornerRadius: 28))
+                OpportunityFacts(opportunity: opportunity)
+
+                Text("Fictional opportunity and organization. Dates, goals, and participation counts are sample data.")
+                    .font(SawabTheme.body(12))
+                    .foregroundStyle(SawabTheme.muted)
 
                 Button { showDemoAlert = true } label: {
                     Text("I'd like to help  ↗")
@@ -63,13 +49,15 @@ struct OpportunityDetailView: View {
                         .padding(.vertical, 17)
                 }
                 .foregroundStyle(.white)
-                .background(SawabTheme.olive, in: RoundedRectangle(cornerRadius: 17))
+                .background(SawabTheme.deepOlive, in: RoundedRectangle(cornerRadius: 20))
                 .padding(.bottom, 20)
             }
             .padding(.horizontal, 22)
             .padding(.top, 9)
         }
         .background(SawabTheme.cream.ignoresSafeArea())
+        .toolbar(.visible, for: .navigationBar)
+        .toolbarBackground(SawabTheme.cream, for: .navigationBar)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .principal) { Text("THE DETAILS").font(SawabTheme.body(10, weight: .semibold)).tracking(2) }
@@ -81,6 +69,7 @@ struct OpportunityDetailView: View {
                     Image(systemName: saved ? "heart.fill" : "heart")
                         .foregroundStyle(SawabTheme.deepOlive)
                 }
+                .buttonStyle(.plain)
                 .accessibilityLabel(saved ? "Remove saved opportunity" : "Save opportunity")
             }
         }
@@ -89,6 +78,23 @@ struct OpportunityDetailView: View {
         } message: {
             Text("Sawab is a portfolio prototype. No real donations or messages are sent.")
         }
+    }
+}
+
+private struct OpportunityFacts: View {
+    let opportunity: Opportunity
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 24) {
+            DetailRow(symbol: "mappin", title: "Location", value: opportunity.city)
+            DetailRow(symbol: "clock", title: "Deadline", value: opportunity.deadline)
+            DetailRow(symbol: "scope", title: "Donation / participation goal", value: opportunity.goal)
+            DetailRow(symbol: "person.2", title: "Contributors", value: opportunity.contributors)
+        }
+        .padding(26)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(SawabTheme.paper, in: RoundedRectangle(cornerRadius: 28))
+        .overlay(RoundedRectangle(cornerRadius: 28).stroke(SawabTheme.line.opacity(0.5)))
     }
 }
 
@@ -101,7 +107,8 @@ private struct DetailRow: View {
         HStack(alignment: .top, spacing: 17) {
             Image(systemName: symbol)
                 .font(.system(size: 23, weight: .light))
-                .frame(width: 27)
+                .frame(width: 44, height: 44)
+                .background(SawabTheme.paleGreen, in: RoundedRectangle(cornerRadius: 14))
                 .foregroundStyle(SawabTheme.olive)
             VStack(alignment: .leading, spacing: 4) {
                 Text(title).font(SawabTheme.body(14, weight: .semibold)).foregroundStyle(SawabTheme.olive)
