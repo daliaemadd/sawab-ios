@@ -6,17 +6,42 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		23BA5A8E30A69D4E0015090A /* figma-reference.png in Resources */ = {isa = PBXBuildFile; fileRef = 23BA5A8C30A69D4E0015090A /* figma-reference.png */; };
+		23BA5A9030A69D570015090A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 23BA5A8F30A69D570015090A /* README.md */; };
+		23BA5AC430A69D730015090A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BA5ABD30A69D730015090A /* HomeView.swift */; };
+		23BA5AC530A69D730015090A /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BA5AB130A69D730015090A /* RootView.swift */; };
+		23BA5AC630A69D730015090A /* OpportunityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BA5ABE30A69D730015090A /* OpportunityDetailView.swift */; };
+		23BA5AC730A69D730015090A /* BrandMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BA5AB430A69D730015090A /* BrandMark.swift */; };
+		23BA5AC830A69D730015090A /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BA5ABC30A69D730015090A /* ExploreView.swift */; };
+		23BA5AC930A69D730015090A /* OpportunityPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BA5AB630A69D730015090A /* OpportunityPhoto.swift */; };
+		23BA5ACA30A69D730015090A /* SawabTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BA5ABA30A69D730015090A /* SawabTheme.swift */; };
+		23BA5ACB30A69D730015090A /* Opportunity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BA5AB830A69D730015090A /* Opportunity.swift */; };
+		23BA5ACC30A69D730015090A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BA5ABF30A69D730015090A /* ProfileView.swift */; };
+		23BA5ACD30A69D730015090A /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BA5AC030A69D730015090A /* SavedView.swift */; };
+		23BA5ACE30A69D730015090A /* SawabApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BA5AB230A69D730015090A /* SawabApp.swift */; };
+		23BA5ACF30A69D730015090A /* OpportunityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BA5AB530A69D730015090A /* OpportunityCard.swift */; };
+		23BA5AD030A69D730015090A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23BA5AC230A69D730015090A /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		23BA5A7730A693D30015090A /* Sawab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sawab.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		23BA5A8C30A69D4E0015090A /* figma-reference.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "figma-reference.png"; sourceTree = "<group>"; };
+		23BA5A8F30A69D570015090A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		23BA5AB130A69D730015090A /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		23BA5AB230A69D730015090A /* SawabApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SawabApp.swift; sourceTree = "<group>"; };
+		23BA5AB430A69D730015090A /* BrandMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandMark.swift; sourceTree = "<group>"; };
+		23BA5AB530A69D730015090A /* OpportunityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportunityCard.swift; sourceTree = "<group>"; };
+		23BA5AB630A69D730015090A /* OpportunityPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportunityPhoto.swift; sourceTree = "<group>"; };
+		23BA5AB830A69D730015090A /* Opportunity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opportunity.swift; sourceTree = "<group>"; };
+		23BA5ABA30A69D730015090A /* SawabTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SawabTheme.swift; sourceTree = "<group>"; };
+		23BA5ABC30A69D730015090A /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		23BA5ABD30A69D730015090A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		23BA5ABE30A69D730015090A /* OpportunityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportunityDetailView.swift; sourceTree = "<group>"; };
+		23BA5ABF30A69D730015090A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		23BA5AC030A69D730015090A /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
+		23BA5AC230A69D730015090A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		23BA5A7930A693D30015090A /* Sawab */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Sawab;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		23BA5A7430A693D30015090A /* Frameworks */ = {
@@ -32,7 +57,8 @@
 		23BA5A6E30A693D30015090A = {
 			isa = PBXGroup;
 			children = (
-				23BA5A7930A693D30015090A /* Sawab */,
+				23BA5AC330A69D730015090A /* Sawab */,
+				23BA5A8D30A69D4E0015090A /* docs */,
 				23BA5A7830A693D30015090A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +69,75 @@
 				23BA5A7730A693D30015090A /* Sawab.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		23BA5A8D30A69D4E0015090A /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				23BA5A8C30A69D4E0015090A /* figma-reference.png */,
+				23BA5A8F30A69D570015090A /* README.md */,
+			);
+			path = docs;
+			sourceTree = "<group>";
+		};
+		23BA5AB330A69D730015090A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				23BA5AB130A69D730015090A /* RootView.swift */,
+				23BA5AB230A69D730015090A /* SawabApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		23BA5AB730A69D730015090A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				23BA5AB430A69D730015090A /* BrandMark.swift */,
+				23BA5AB530A69D730015090A /* OpportunityCard.swift */,
+				23BA5AB630A69D730015090A /* OpportunityPhoto.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		23BA5AB930A69D730015090A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				23BA5AB830A69D730015090A /* Opportunity.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		23BA5ABB30A69D730015090A /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				23BA5ABA30A69D730015090A /* SawabTheme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		23BA5AC130A69D730015090A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				23BA5ABC30A69D730015090A /* ExploreView.swift */,
+				23BA5ABD30A69D730015090A /* HomeView.swift */,
+				23BA5ABE30A69D730015090A /* OpportunityDetailView.swift */,
+				23BA5ABF30A69D730015090A /* ProfileView.swift */,
+				23BA5AC030A69D730015090A /* SavedView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		23BA5AC330A69D730015090A /* Sawab */ = {
+			isa = PBXGroup;
+			children = (
+				23BA5AB330A69D730015090A /* App */,
+				23BA5AB730A69D730015090A /* Components */,
+				23BA5AB930A69D730015090A /* Models */,
+				23BA5ABB30A69D730015090A /* Theme */,
+				23BA5AC130A69D730015090A /* Views */,
+				23BA5AC230A69D730015090A /* Assets.xcassets */,
+			);
+			path = Sawab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +154,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				23BA5A7930A693D30015090A /* Sawab */,
 			);
 			name = Sawab;
 			packageProductDependencies = (
@@ -109,6 +201,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23BA5A9030A69D570015090A /* README.md in Resources */,
+				23BA5AD030A69D730015090A /* Assets.xcassets in Resources */,
+				23BA5A8E30A69D4E0015090A /* figma-reference.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +214,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23BA5AC430A69D730015090A /* HomeView.swift in Sources */,
+				23BA5AC530A69D730015090A /* RootView.swift in Sources */,
+				23BA5AC630A69D730015090A /* OpportunityDetailView.swift in Sources */,
+				23BA5AC730A69D730015090A /* BrandMark.swift in Sources */,
+				23BA5AC830A69D730015090A /* ExploreView.swift in Sources */,
+				23BA5AC930A69D730015090A /* OpportunityPhoto.swift in Sources */,
+				23BA5ACA30A69D730015090A /* SawabTheme.swift in Sources */,
+				23BA5ACB30A69D730015090A /* Opportunity.swift in Sources */,
+				23BA5ACC30A69D730015090A /* ProfileView.swift in Sources */,
+				23BA5ACD30A69D730015090A /* SavedView.swift in Sources */,
+				23BA5ACE30A69D730015090A /* SawabApp.swift in Sources */,
+				23BA5ACF30A69D730015090A /* OpportunityCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
