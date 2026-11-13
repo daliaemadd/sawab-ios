@@ -47,6 +47,14 @@
 		23BA5AC230A69D730015090A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		238B0F0530A6C4B5005C0261 /* screenshots */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = screenshots;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		23BA5A7430A693D30015090A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -79,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				23BA5A8C30A69D4E0015090A /* figma-reference.png */,
+				238B0F0530A6C4B5005C0261 /* screenshots */,
 				23BA5A8F30A69D570015090A /* README.md */,
 			);
 			path = docs;
@@ -161,6 +170,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				238B0F0530A6C4B5005C0261 /* screenshots */,
 			);
 			name = Sawab;
 			packageProductDependencies = (

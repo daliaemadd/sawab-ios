@@ -2,7 +2,13 @@
 
 A SwiftUI charity app prototype connecting people with opportunities to help underserved communities in Egypt. Warm cream backgrounds, muted olive, peach accents, and editorial serif headings give the interface a welcoming identity.
 
-![Figma design reference](docs/figma-reference.png)
+## App Preview
+
+Actual simulator screenshots of the Sawab iOS app.
+
+| Home | Explore | Opportunity Detail |
+| :---: | :---: | :---: |
+| <img src="docs/screenshots/home.png" alt="Sawab Home screen with featured opportunities" width="250"> | <img src="docs/screenshots/explore.png" alt="Sawab Explore screen with search and category filters" width="250"> | <img src="docs/screenshots/opportunity-detail.png" alt="Sawab Opportunity Detail screen" width="250"> |
 
 ## Development status
 
@@ -49,6 +55,12 @@ Shared components and `SawabTheme` keep the design consistent without adding a v
 - Organizations, verification labels, needs, dates, distances, and counts are sample content. No donations, messages, or account creation occur.
 - Typography uses the built-in system serif, paired with a neutral system sans serif. Photography remains illustrative placeholder content, so this is a visual interpretation of the supplied reference.
 - The AppIcon asset set is present for builds but still needs final 1024 × 1024 artwork before release.
+
+## Design Process
+
+The original Figma mockups established Sawab’s warm cream backgrounds, muted olive palette, editorial typography, and rounded cards. The SwiftUI implementation builds on that direction with local sample data, search, and persistent saved opportunities.
+
+![Original Sawab Figma mockups](docs/figma-reference.png)
 
 ## Validation
 
